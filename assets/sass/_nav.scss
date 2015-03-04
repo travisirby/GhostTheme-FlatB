@@ -1,0 +1,61 @@
+.nav-menu {
+  display: none;
+  float: right;
+  min-width: 30%;
+
+  @include medium-screen {
+    display: block;
+  }
+
+  @include large-screen {
+    float: left;
+    clear: both;
+    margin: 10px 0 0 20px;
+    max-width: 100px;
+  }
+
+  li {
+    display: inline;
+    font-size: 200%;
+    list-style: none;
+
+    a {
+      color: white;
+      padding: 5px;
+      box-shadow: 3px 0  0 $darkestMainColor,
+      0 3px 0 $darkestMainColor;
+
+      @include medium-screen {
+        background-color: $mainColor;
+      }
+
+      &:hover {
+        color: lighten($textColor1, 30%);
+        background-color: $lightestMainColor;
+        box-shadow: 3px 0  0 $darkerMainColor,
+        0 3px 0 $darkerMainColor;
+      }
+
+      &:last-child {
+        @include last;
+      }
+
+      @include large-screen {
+        padding: 10px;
+        margin: 2px 3px 1px 3px;
+      }
+
+    }
+  }
+}
+
+#nav-menu-current {
+  a {
+    color: white;
+
+    @include large-screen {
+      // font-size: 140%;
+      // box-shadow: 10px 0  0 $lightestMainColor;
+    }
+  }
+}

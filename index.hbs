@@ -1,0 +1,53 @@
+{{!< default}}
+
+<main role="main">
+
+ {{#foreach posts}}
+
+ {{#has tag="blog"}}
+
+  <article class="{{post_class}}" role="article" itemscope itemtype="http://schema.org/Article">
+
+
+      {{#if image}}
+      <div class="posts-col-left">
+
+        <div class="post-image-container">
+
+          <img src="{{image}}" />
+
+        </div>
+      </div>
+
+      <div class="posts-col-right">
+
+      {{else}}
+
+      <div class="posts-col-full">
+
+      {{/if}}
+
+      <a href="{{{url}}}" rel="bookmark"><header class="post-header">
+
+          <h1 class="post-title" itemprop="headline">{{title}}</h1>
+
+        </header></a>
+
+        <div class="post-excerpt" itemprop="articleBody">
+
+          {{excerpt characters="230"}}
+          <span>...</span>
+
+        </div>
+
+      </div>
+
+    <br class="clear">
+
+  </article>
+
+  {{/has}}
+
+ {{/foreach}}
+
+</main>

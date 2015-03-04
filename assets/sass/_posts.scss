@@ -1,0 +1,80 @@
+// left column contains post image
+.posts-col-left {
+  float: left;
+  width: percentage(4/12);
+}
+
+// right column contains post title and excerpt
+.posts-col-right {
+  float: left;
+  width: percentage(8/12);
+}
+
+// if post has no image display only one column
+.posts-col-full {
+  float: left;
+  width: 100%;
+}
+
+.post {
+  white-space: normal;
+  background-color: lighten($lightestMainColor, 5%);
+  font-size: 110%;
+  margin-bottom: 10px;
+
+  &:first-child {
+    padding-top: 50px;
+
+    @include large-screen{
+      padding: 0;
+    }
+  }
+
+  a {
+    &:link {
+      color: white;
+    }
+    &:visited{
+      color: white;
+    }
+  }
+
+}
+
+.post-header{
+  padding: 10px 0 10px 0;
+
+
+    &:hover .post-title{
+      box-shadow:  0 -10px  0 $darkestMainColor,
+                   0 10px  0 $darkestMainColor,
+                   10px 0  0 $darkestMainColor,
+                   -10px 0  0 $darkestMainColor;
+     background-color: $darkestMainColor;
+    }
+}
+
+.post-title{
+  padding: 5px 5px 5px 10px;
+  background-color: $darkerMainColor;
+  line-height: 1em;
+  font-size: 120%;
+  font-weight: bold;
+  text-align: center;
+  box-shadow:   $postTitleBoxShadowHover;
+}
+
+.post-excerpt {
+  overflow: hidden;
+  padding: 10px 10px 15px 10px;
+  line-height: 1.4em;
+  background-color: rgba(255,255,255,0.3);
+  font-size: 95%;
+  margin: 0 10px 10px 10px;
+}
+
+.post-image-container {
+  height: 200px;
+  overflow: hidden;
+
+}

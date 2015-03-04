@@ -1,0 +1,74 @@
+.post-content-single {
+
+  background-color: lighten($lightestMainColor, 5%);
+  overflow:hidden;
+
+  h1 {
+  }
+  p {
+    padding: 10px;
+  }
+  a {
+    font-weight: bold;
+  }
+  ul {
+    padding: 10px;
+  }
+  img {
+    max-width:97%;
+  }
+
+  @include large-screen {
+    margin: 10px;
+  }
+}
+
+.post-title-single {
+  background-color: darken($mainColor, 5%);
+  color: white;
+  font-size: 140%;
+  font-weight: bold;
+  padding: 10px;
+  margin-top: 70px;
+  box-shadow: 20px 0  0 $lightestMainColor,
+  -20px 0  0 $lightestMainColor,
+  0 10px 0 $lighterMainColor,
+  0 -10px 0 $lighterMainColor;
+
+  @include large-screen {
+    margin: 0;
+  }
+
+}
+
+.post-date-single {
+  float:right;
+  background-color: $lighterMainColor;
+  color: $textColor1;
+  font-size: 90%;
+  margin-right: 15px;
+  padding: 5px;
+}
+
+.post-content  {
+
+  padding: 10px;
+  margin-top: 10px;
+  line-height: 1.5em;
+
+  > * {
+    width: auto;
+    padding: 10px;
+
+    &:first-child {
+      margin-top: 15px;
+    }
+
+    &:nth-child(odd) {
+      background: lighten($lightestMainColor, 12%);
+    }
+
+  }
+
+
+}

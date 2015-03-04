@@ -1,0 +1,123 @@
+/*
+    Mobile Menu Core Style
+*/
+
+.slicknav_btn { position: relative; display: block; vertical-align: middle; float: right; padding: 2px 2px 0 10px; line-height: 1.125em; cursor: pointer; }
+.slicknav_menu  .slicknav_menutxt { display: block; line-height: 1.188em; float: left; }
+.slicknav_menu .slicknav_icon { float: left; margin: 7px 7px 0 7px; }
+.slicknav_menu .slicknav_no-text { margin: 0 }
+.slicknav_menu .slicknav_icon-bar { display: block; width: 1.325em; height: 0.225em; }
+.slicknav_btn .slicknav_icon-bar + .slicknav_icon-bar { margin-top: 0.188em }
+.slicknav_nav { clear: both }
+.slicknav_nav ul,
+.slicknav_nav li { display: block }
+.slicknav_nav .slicknav_arrow { font-size: 0.8em; margin: 0 0 0 0.4em; }
+.slicknav_nav .slicknav_item { cursor: pointer; }
+.slicknav_nav .slicknav_row { display: block; }
+.slicknav_nav a { display: block }
+.slicknav_nav .slicknav_item a,
+.slicknav_nav .slicknav_parent-link a { display: inline }
+.slicknav_menu:before,
+.slicknav_menu:after { content: " "; display: table; }
+.slicknav_menu:after { clear: both }
+/* IE6/7 support */
+.slicknav_menu { *zoom: 1 }
+
+/*
+    User Default Style
+    Change the following styles to modify the appearance of the menu.
+*/
+
+.slicknav_menu {
+    z-index: 9999;
+    font-size:150%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    position: fixed;
+
+    @include medium-screen {
+      display: none;
+    }
+}
+
+
+/* Button */
+.slicknav_btn {
+    text-decoration:none;
+    padding-bottom: 15px;
+    color:black;
+}
+
+/* Button Text */
+.slicknav_menu  .slicknav_menutxt {
+  display:none;
+}
+/* Button Lines */
+.slicknav_menu .slicknav_icon-bar {
+  background-color: $darkerMainColor;
+
+}
+
+.slicknav_nav {
+
+    padding-bottom: 5px;
+
+    ul {
+      margin-top: 10px;
+    }
+
+    li {
+      margin: 0 0 2.5px 0;
+      width: 100%;
+      background-color: $mainColor;
+      float: left;
+      width: 50%;
+      text-align: center;
+      box-shadow:  2.5px 0  0 $lighterMainColor,
+                   -2.5px 0  0 $lighterMainColor,
+                   0 2.5px  0 $lighterMainColor,
+                   0 -2.5px  0 $lighterMainColor;
+
+      a {
+        color: white;
+        font-size: 120%;
+        font-weight: bold;
+      }
+
+      &:hover {
+          background:$lighterMainColor;
+          color:#fff;
+      }
+    }
+}
+.slicknav_nav, .slicknav_nav ul {
+    list-style: none;
+    overflow:hidden;
+}
+.slicknav_nav ul {
+    padding:0;
+    margin:0 0 0 20px;
+}
+.slicknav_nav .slicknav_row {
+    padding:5px 10px;
+    margin:2px 5px;
+}
+.slicknav_nav a{
+    padding:5px 10px;
+    margin:2px 5px;
+    text-decoration:none;
+    color:#fff;
+}
+.slicknav_nav .slicknav_item a,
+.slicknav_nav .slicknav_parent-link a {
+    padding:0;
+    margin:0;
+}
+
+.slicknav_nav a:hover{
+    color:$darkestMainColor;
+}
+.slicknav_nav .slicknav_txtnode {
+     margin-left:15px;
+}
