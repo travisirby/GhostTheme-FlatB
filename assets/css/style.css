@@ -1,4 +1,16 @@
 @import url(reset.css);
+.tooltipster-noir {
+  border-radius: 0px;
+  border: 8px solid #cbd68d;
+  background: #869535;
+  color: white; }
+
+.tooltipster-noir .tooltipster-content {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 16px;
+  padding: 8px 10px; }
+
 /*
     Mobile Menu Core Style
 */
@@ -72,9 +84,8 @@
     Change the following styles to modify the appearance of the menu.
 */
 .slicknav_menu {
-  z-index: 9999;
+  z-index: 99;
   font-size: 150%;
-  width: 100%;
   top: 0;
   right: 0;
   position: fixed; }
@@ -86,6 +97,7 @@
 .slicknav_btn {
   text-decoration: none;
   padding-bottom: 15px;
+  margin-bottom: 2px;
   color: black; }
 
 /* Button Text */
@@ -94,35 +106,26 @@
 
 /* Button Lines */
 .slicknav_menu .slicknav_icon-bar {
-  background-color: #e49d3d; }
+  background-color: #9aac3d; }
 
-.slicknav_nav {
-  padding-bottom: 5px; }
-  .slicknav_nav ul {
-    margin-top: 10px; }
-  .slicknav_nav li {
-    margin: 0 0 2.5px 0;
-    width: 100%;
-    background-color: #E9AF61;
-    float: left;
-    width: 50%;
-    text-align: center;
-    box-shadow: 2.5px 0 0 #eec185, -2.5px 0 0 #eec185, 0 2.5px 0 #eec185, 0 -2.5px 0 #eec185; }
-    .slicknav_nav li a {
-      color: white;
-      font-size: 120%;
-      font-weight: bold; }
-    .slicknav_nav li:hover {
-      background: #eec185;
-      color: #fff; }
+.slicknav_nav li {
+  background-color: #AFC151;
+  float: left;
+  text-align: center;
+  border-width: 0 5px 5px 5px;
+  border-style: solid;
+  border-color: #869535; }
+  .slicknav_nav li a {
+    color: white;
+    font-size: 120%;
+    font-weight: bold; }
+  .slicknav_nav li:hover {
+    background: #bdcc6f;
+    color: #fff; }
 
 .slicknav_nav, .slicknav_nav ul {
   list-style: none;
   overflow: hidden; }
-
-.slicknav_nav ul {
-  padding: 0;
-  margin: 0 0 0 20px; }
 
 .slicknav_nav .slicknav_row {
   padding: 5px 10px;
@@ -134,55 +137,47 @@
   text-decoration: none;
   color: #fff; }
 
-.slicknav_nav .slicknav_item a,
-.slicknav_nav .slicknav_parent-link a {
-  padding: 0;
-  margin: 0; }
-
 .slicknav_nav a:hover {
-  color: #e08f22; }
+  color: #869535; }
 
 .slicknav_nav .slicknav_txtnode {
   margin-left: 15px; }
 
-.nav-menu {
+.nav-large {
   display: none;
   float: right;
   min-width: 30%; }
   @media (min-width: 420px) {
-    .nav-menu {
+    .nav-large {
       display: block; } }
   @media (min-width: 810px) {
-    .nav-menu {
+    .nav-large {
       float: left;
       clear: both;
-      margin: 10px 0 0 20px;
+      margin: 10px 0 0 30px;
       max-width: 100px; } }
-  .nav-menu li {
+  .nav-large li {
     display: inline;
-    font-size: 200%;
+    font-size: 215%;
     list-style: none; }
-    .nav-menu li a {
+    .nav-large li a {
       color: white;
       padding: 5px;
-      box-shadow: 3px 0 0 #e08f22, 0 3px 0 #e08f22; }
+      box-shadow: 3px 0 0 #869535, 0 3px 0 #869535; }
       @media (min-width: 420px) {
-        .nav-menu li a {
-          background-color: #E9AF61; } }
-      .nav-menu li a:hover {
-        color: #c87f1c;
-        background-color: #f3d3a9;
-        box-shadow: 3px 0 0 #e49d3d, 0 3px 0 #e49d3d; }
-      .nav-menu li a:last-child {
+        .nav-large li a {
+          background-color: #AFC151; } }
+      .nav-large li a:hover {
+        color: #727f2d;
+        background-color: #cbd68d;
+        box-shadow: 3px 0 0 #9aac3d, 0 3px 0 #9aac3d; }
+      .nav-large li a:last-child {
         float: right;
         margin-right: 0; }
       @media (min-width: 810px) {
-        .nav-menu li a {
+        .nav-large li a {
           padding: 10px;
           margin: 2px 3px 1px 3px; } }
-
-#nav-menu-current a {
-  color: white; }
 
 .posts-col-left {
   float: left;
@@ -198,7 +193,7 @@
 
 .post {
   white-space: normal;
-  background-color: #f6dfbf;
+  background-color: #d3dda0;
   font-size: 110%;
   margin-bottom: 10px; }
   .post:first-child {
@@ -214,21 +209,21 @@
 .post-header {
   padding: 10px 0 10px 0; }
   .post-header:hover .post-title {
-    box-shadow: 0 -10px 0 #e08f22, 0 10px 0 #e08f22, 10px 0 0 #e08f22, -10px 0 0 #e08f22;
-    background-color: #e08f22; }
+    box-shadow: 0 -10px 0 #869535, 0 10px 0 #869535, 10px 0 0 #869535, -10px 0 0 #869535;
+    background-color: #869535; }
 
 .post-title {
   padding: 5px 5px 5px 10px;
-  background-color: #e49d3d;
+  background-color: #9aac3d;
   line-height: 1em;
   font-size: 120%;
   font-weight: bold;
   text-align: center;
-  box-shadow: 0 -10px 0 #e49d3d, 0 10px 0 #e49d3d, 10px 0 0 #e49d3d, -10px 0 0 #e49d3d; }
+  box-shadow: 0 -10px 0 #9aac3d, 0 10px 0 #9aac3d, 10px 0 0 #9aac3d, -10px 0 0 #9aac3d; }
 
 .post-excerpt {
   overflow: hidden;
-  padding: 10px 10px 15px 10px;
+  padding: 10px 10px 10px 10px;
   line-height: 1.4em;
   background-color: rgba(255, 255, 255, 0.3);
   font-size: 95%;
@@ -239,7 +234,7 @@
   overflow: hidden; }
 
 .post-content-single {
-  background-color: #f6dfbf;
+  background-color: #d3dda0;
   overflow: hidden; }
   .post-content-single p {
     padding: 10px; }
@@ -254,21 +249,21 @@
       margin: 10px; } }
 
 .post-title-single {
-  background-color: #e6a44b;
+  background-color: #a4b741;
   color: white;
   font-size: 140%;
   font-weight: bold;
   padding: 10px;
   margin-top: 70px;
-  box-shadow: 20px 0 0 #f3d3a9, -20px 0 0 #f3d3a9, 0 10px 0 #eec185, 0 -10px 0 #eec185; }
+  box-shadow: 20px 0 0 #cbd68d, -20px 0 0 #cbd68d, 0 10px 0 #bdcc6f, 0 -10px 0 #bdcc6f; }
   @media (min-width: 810px) {
     .post-title-single {
       margin: 0; } }
 
 .post-date-single {
   float: right;
-  background-color: #eec185;
-  color: #422a09;
+  background-color: #bdcc6f;
+  color: #0d0e05;
   font-size: 90%;
   margin-right: 15px;
   padding: 5px; }
@@ -283,7 +278,7 @@
     .post-content > *:first-child {
       margin-top: 15px; }
     .post-content > *:nth-child(odd) {
-      background: #faeede; }
+      background: #dfe7ba; }
 
 .container {
   max-width: 850px;
@@ -299,16 +294,20 @@
   max-width: 790px;
   background-color: white;
   width: 100%;
-  box-shadow: 0 5px 0 #eec185; }
+  box-shadow: 0 5px 0 #869535;
+  z-index: 10; }
   @media (min-width: 810px) {
     .top-bar {
       background-color: transparent;
       box-shadow: none;
+      z-index: 1;
       width: 21.42857%;
       float: left; } }
 
 .main-content {
-  background-color: #E9AF61; }
+  position: relative;
+  z-index: 5;
+  background-color: #AFC151; }
   @media (min-width: 810px) {
     .main-content {
       width: 78.57143%;
@@ -321,30 +320,31 @@
   letter-spacing: -1px; }
   @media (min-width: 810px) {
     #site-header {
-      margin-bottom: 10px; } }
+      margin: 0 0 10px 30px; } }
 
 #site-title {
+  position: relative;
+  z-index: 999;
+  margin: 2px 0 0 0px;
+  white-space: nowrap;
   font-weight: bold;
   font-size: 175%;
-  text-align: center;
-  margin: 2px 0 0 0;
-  white-space: nowrap;
-  color: #e2942b;
-  font-variant: small-caps; }
+  text-align: right;
+  color: #8d9d38; }
   @media (min-width: 810px) {
     #site-title {
       padding: 2px;
       margin: 10px 0 0 0; } }
 
 #site-description {
-  font-size: 92%;
-  text-align: center;
-  font-weight: bold;
-  color: white;
+  background-color: #AFC151;
   width: 106px;
   margin-left: 5px;
-  background-color: #E9AF61;
-  padding: 1px; }
+  padding: 1px;
+  color: white;
+  font-size: 92%;
+  text-align: center;
+  font-weight: bold; }
 
 #logo {
   float: left;
@@ -361,13 +361,13 @@ main {
 
 body {
   font-family: "Arimo", sans-serif;
-  color: #422a09; }
+  color: #0d0e05; }
 
 a:link {
-  color: #422a09;
+  color: #0d0e05;
   text-decoration: none; }
 a:visited {
-  color: #422a09; }
+  color: #0d0e05; }
 
 br.clear {
   clear: both; }

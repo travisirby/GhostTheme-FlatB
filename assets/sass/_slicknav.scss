@@ -29,13 +29,11 @@
 */
 
 .slicknav_menu {
-    z-index: 9999;
+    z-index: 99;
     font-size:150%;
-    width: 100%;
     top: 0;
     right: 0;
     position: fixed;
-
     @include medium-screen {
       display: none;
     }
@@ -46,6 +44,7 @@
 .slicknav_btn {
     text-decoration:none;
     padding-bottom: 15px;
+    margin-bottom: 2px;
     color:black;
 }
 
@@ -59,25 +58,16 @@
 
 }
 
+
 .slicknav_nav {
 
-    padding-bottom: 5px;
-
-    ul {
-      margin-top: 10px;
-    }
-
     li {
-      margin: 0 0 2.5px 0;
-      width: 100%;
       background-color: $mainColor;
       float: left;
-      width: 50%;
       text-align: center;
-      box-shadow:  2.5px 0  0 $lighterMainColor,
-                   -2.5px 0  0 $lighterMainColor,
-                   0 2.5px  0 $lighterMainColor,
-                   0 -2.5px  0 $lighterMainColor;
+      border-width: 0 5px 5px 5px;
+      border-style: solid;
+      border-color: $darkestMainColor;
 
       a {
         color: white;
@@ -95,10 +85,10 @@
     list-style: none;
     overflow:hidden;
 }
-.slicknav_nav ul {
-    padding:0;
-    margin:0 0 0 20px;
-}
+// .slicknav_nav ul {
+//     padding:0;
+//     margin:0 0 0 20px;
+// }
 .slicknav_nav .slicknav_row {
     padding:5px 10px;
     margin:2px 5px;
@@ -109,11 +99,11 @@
     text-decoration:none;
     color:#fff;
 }
-.slicknav_nav .slicknav_item a,
-.slicknav_nav .slicknav_parent-link a {
-    padding:0;
-    margin:0;
-}
+// .slicknav_nav .slicknav_item a,
+// .slicknav_nav .slicknav_parent-link a {
+//     padding:0;
+//     margin:0;
+// }
 
 .slicknav_nav a:hover{
     color:$darkestMainColor;

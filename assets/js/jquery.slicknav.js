@@ -8,7 +8,7 @@
     // default settings object.
         defaults = {
             label: 'menu',
-            duplicate: true,
+            duplicate: false,
             duration: 50,
             easingOpen: 'linear',
             easingClose: 'linear',

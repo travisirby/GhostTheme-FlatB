@@ -14,6 +14,7 @@
 
   {{! Ghost outputs important style and meta data with this tag }}
   {{ghost_head}}
+
 </head>
 
 <body class="{{body_class}}">
@@ -29,26 +30,33 @@
       </div>
 
       <div class="main-content">
+
         {{! Everything else gets inserted here }}
         {{{body}}}
 
         {{! Ghost outputs important scripts and data with this tag }}
         {{ghost_foot}}
+
       </div>
 
   </div>
 
-
   <script type="text/javascript" src='{{asset "js/index.js"}}'></script>
-  <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
-  <script src="/assets/js/jquery.slicknav.js"></script>
+  <script type="text/javascript" src='{{asset "js/jquery.fitvids.js"}}'></script>
+  <script type="text/javascript" src='{{asset "js/jquery.slicknav.js"}}'></script>
+  <script type="text/javascript" src='{{asset "js/jquery.tooltipster.min.js"}}'></script>
 
   <script>
-      $(document).ready(function(){
-          // Target your .container, .wrapper, .post, etc.
-          $(".post-content").fitVids();
-          $('#slicknav').slicknav();
+    $(document).ready(function() {
+      $('.tooltip').tooltipster({
+        theme: 'tooltipster-noir',
+        position: 'left',
+        animation: 'swing',
+        speed: '100',
       });
+      $(".post-content").fitVids();
+      $('#slicknav').slicknav();
+    });
   </script>
 
 </body>
